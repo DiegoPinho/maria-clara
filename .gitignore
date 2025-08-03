@@ -1,14 +1,8 @@
-
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Virtual environment
 venv/
 .env
-
-# Docker
 *.log
 *.pid
 *.seed
@@ -16,22 +10,12 @@ venv/
 *.swp
 *.tmp
 *.sqlite3
-
-# VS Code
 .vscode/
-
-# Pytest cache
 .cache/
 .pytest_cache/
-
-# MyPy
 .mypy_cache/
 .dmypy.json
-
-# IDEs
 .idea/
 *.iml
-
-# OS files
 .DS_Store
 Thumbs.db

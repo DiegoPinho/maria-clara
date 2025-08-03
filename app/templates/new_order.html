@@ -1,26 +1,30 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>New Order</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-</head>
-<body>
-<nav class="navbar is-primary">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/">Order System</a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item" href="/orders">View Orders</a>
-      <a class="navbar-item" href="/orders/new">New Order</a>
-    </div>
-  </div>
-</nav>
 
-<section class="section">
-  <div class="container">
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Order</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.png">
+  <link rel="stylesheet" href="/static/bulma.min.css">
+</head>
+
+<body>
+  <nav class="navbar is-primary">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">Home</a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/orders">View Orders</a>
+        <a class="navbar-item" href="/orders/new">New Order</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+
       <h1 class="title">New Order</h1>
       <form method="post" action="/orders">
         <div class="field">
@@ -59,13 +63,14 @@
         <button class="button is-primary" type="submit">Submit</button>
       </form>
       <script>
-      function duplicate() {
-        const container = document.getElementById('items');
-        container.appendChild(container.firstElementChild.cloneNode(true));
-      }
+        function duplicate() {
+          const container = document.getElementById('items');
+          container.appendChild(container.firstElementChild.cloneNode(true));
+        }
       </script>
-    
-  </div>
-</section>
+
+    </div>
+  </section>
 </body>
+
 </html>
