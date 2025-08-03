@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from app.routes import orders
+from app.utils.date_utils import format_brazilian_date, format_brazilian_datetime
 
 app = FastAPI()
 
@@ -12,6 +13,10 @@ app.include_router(orders.router)
 # pages
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
+
+# Registrar filtros personalizados do Jinja2
+templates.env.filters["brazilian_date"] = format_brazilian_date
+templates.env.filters["brazilian_datetime"] = format_brazilian_datetime
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):

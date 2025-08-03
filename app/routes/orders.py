@@ -9,9 +9,14 @@ from app.usecases.list_orders import ListOrdersUseCase
 from app.usecases.count_orders import CountOrdersUseCase
 from app.usecases.get_order_detail import GetOrderDetailUseCase
 from app.usecases.delete_order import DeleteOrderUseCase
+from app.utils.date_utils import format_brazilian_date, format_brazilian_datetime
 
 router = APIRouter()
 templates = Jinja2Templates(directory="app/templates")
+
+# Registrar filtros personalizados do Jinja2
+templates.env.filters["brazilian_date"] = format_brazilian_date
+templates.env.filters["brazilian_datetime"] = format_brazilian_datetime
 
 repo = MongoOrderRepository()
 

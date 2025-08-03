@@ -27,7 +27,7 @@
 
       <h1 class="title">Order for {{ order.customer_name }}</h1>
       <p><strong>Email:</strong> {{ order.customer_email }}</p>
-      <p><strong>Date:</strong> {{ order.order_date }}</p>
+      <p><strong>Date:</strong> {{ order.order_date | brazilian_date }}</p>
       <h2 class="subtitle">Items</h2>
       <ul>
         {% for item in order["items"] %}
