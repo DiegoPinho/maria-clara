@@ -1,4 +1,4 @@
-# 📦 Sistema de Pedidos - FastAPI + MongoDB + Jinja2 + HTMX
+# 📦 Sistema de Pedidos - Prova Técnica
 
 Este projeto é uma aplicação fullstack desenvolvida como prova técnica para vaga de Desenvolvedor Pleno.
 

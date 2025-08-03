@@ -14,7 +14,6 @@ from app.utils.date_utils import format_brazilian_date, format_brazilian_datetim
 router = APIRouter()
 templates = Jinja2Templates(directory="app/templates")
 
-# Registrar filtros personalizados do Jinja2
 templates.env.filters["brazilian_date"] = format_brazilian_date
 templates.env.filters["brazilian_datetime"] = format_brazilian_datetime
 
